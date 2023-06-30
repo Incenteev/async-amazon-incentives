@@ -1,0 +1,72 @@
+{
+  "partitions": [{
+    "defaults": {
+      "protocols": ["https"],
+      "signatureVersions" : [ "v4" ]
+    },
+    "dnsSuffix" : "amazon.com",
+    "partition": "agcod",
+    "regions": {
+      "na": {
+        "description" : "North America (US, CA, MX)"
+      },
+      "na-sandbox": {
+        "description" : "Sandbox environment for North America (US, CA, MX)"
+      },
+      "eu": {
+        "description" : "Europe and Asia (IT, ES, DE, FR, UK, TR, UAE, KSA, PL, NL, SE)"
+      },
+      "eu-sandbox": {
+        "description" : "Sandbox environment for Europe and Asia (IT, ES, DE, FR, UK, TR, UAE, KSA, PL, NL, SE)"
+      },
+      "fe": {
+        "description" : "Far East (JP, AU, SG)"
+      },
+      "fe-sandbox": {
+        "description" : "Sandbox environment for Far East (JP, AU, SG)"
+      }
+    },
+    "services": {
+      "incentives": {
+        "endpoints": {
+          "na": {
+            "hostname": "agcod-v2.amazon.com",
+            "credentialScope": {
+              "region": "us-east-1"
+            }
+          },
+          "na-sandbox": {
+            "hostname": "agcod-v2-gamma.amazon.com",
+            "credentialScope": {
+              "region": "us-east-1"
+            }
+          },
+          "eu": {
+            "hostname": "agcod-v2-eu.amazon.com",
+            "credentialScope": {
+              "region": "eu-west-1"
+            }
+          },
+          "eu-sandbox": {
+            "hostname": "agcod-v2-eu-gamma.amazon.com",
+            "credentialScope": {
+              "region": "eu-west-1"
+            }
+          },
+          "fe": {
+            "hostname": "agcod-v2-fe.amazon.com",
+            "credentialScope": {
+              "region": "eu-west-1"
+            }
+          },
+          "fe-sandbox": {
+            "hostname": "agcod-v2-fe-gamma.amazon.com",
+            "credentialScope": {
+              "region": "eu-west-1"
+            }
+          }
+        }
+      }
+    }
+  }]
+}

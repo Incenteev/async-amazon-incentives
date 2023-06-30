@@ -1,0 +1,561 @@
+{
+  "version":"2.0",
+  "metadata":{
+    "apiVersion":"2019-11-29",
+    "endpointPrefix":"incentives",
+    "protocol":"rest-xml",
+    "serviceFullName":"Amazon Incentives",
+    "signatureVersion":"v4",
+    "signingName": "AGCODService",
+    "uid":"agcod-2019-11-29"
+  },
+  "operations":{
+    "CancelGiftCard":{
+      "name":"CancelGiftCard",
+      "http":{
+        "method":"POST",
+        "requestUri":"/CancelGiftCard"
+      },
+      "input":{
+        "shape":"CancelGiftCardRequest",
+        "locationName": "CancelGiftCardRequest"
+      },
+      "output":{"shape":"CancelGiftCardResponse"},
+      "errors":[
+        {"shape": "InvalidRequestInput"},
+        {"shape": "InvalidCardNumberInput"},
+        {"shape": "InvalidPartnerIdInput"},
+        {"shape": "InvalidAmountInput"},
+        {"shape": "InvalidAmountValue"},
+        {"shape": "InvalidCurrencyCodeInput"},
+        {"shape": "InvalidRequestIdInput"},
+        {"shape": "CardNotFound"},
+        {"shape": "RequestedDenominationMismatch"},
+        {"shape": "NegativeOrZeroAmount"},
+        {"shape": "MaxAmountExceeded"},
+        {"shape": "CurrencyCodeMismatch"},
+        {"shape": "FractionalAmountNotAllowed"},
+        {"shape": "GcNotReadyForRefund"},
+        {"shape": "RequestIdTooLong"},
+        {"shape": "RequestIdMustStartWithPartnerName"},
+        {"shape": "InvalidGCIdInput"},
+        {"shape": "InvalidCurrencyInMarketplace"},
+        {"shape": "AmountBelowMinThreshold"},
+        {"shape": "ExternalReferenceTooLong"},
+        {"shape": "CancelRequestArrivedAfterTimeLimit"},
+        {"shape": "ProgramIdNotPresent"},
+        {"shape": "UnknownCustomer"},
+        {"shape": "InvalidAwsAccessKeyId"},
+        {"shape": "BlockedCustomer"},
+        {"shape": "InsufficientFunds"},
+        {"shape": "IssuanceCapExceeded"},
+        {"shape": "AccountHasProblems"},
+        {"shape": "OperationNotPermitted"},
+        {"shape": "BadInput"},
+        {"shape": "ActiveContractNotFound"},
+        {"shape": "CustomerAccountBlocked"},
+        {"shape": "InvalidProgramId"},
+        {"shape": "ProgramIsNotApproved"},
+        {"shape": "SystemTemporarilyUnavailable"},
+        {"shape": "GeneralError"},
+        {"shape": "ThrottlingException"}
+      ]
+    },
+    "CreateGiftCard":{
+      "name":"CreateGiftCard",
+      "http":{
+        "method":"POST",
+        "requestUri":"/CreateGiftCard"
+      },
+      "input":{
+        "shape":"CreateGiftCardRequest",
+        "locationName": "CreateGiftCardRequest"
+      },
+      "output":{"shape":"CreateGiftCardResponse"},
+      "errors":[
+        {"shape": "InvalidRequestInput"},
+        {"shape": "InvalidCardNumberInput"},
+        {"shape": "InvalidPartnerIdInput"},
+        {"shape": "InvalidAmountInput"},
+        {"shape": "InvalidAmountValue"},
+        {"shape": "InvalidCurrencyCodeInput"},
+        {"shape": "InvalidRequestIdInput"},
+        {"shape": "CardNotFound"},
+        {"shape": "RequestedDenominationMismatch"},
+        {"shape": "NegativeOrZeroAmount"},
+        {"shape": "MaxAmountExceeded"},
+        {"shape": "CurrencyCodeMismatch"},
+        {"shape": "FractionalAmountNotAllowed"},
+        {"shape": "GcNotReadyForRefund"},
+        {"shape": "RequestIdTooLong"},
+        {"shape": "RequestIdMustStartWithPartnerName"},
+        {"shape": "InvalidGCIdInput"},
+        {"shape": "InvalidCurrencyInMarketplace"},
+        {"shape": "AmountBelowMinThreshold"},
+        {"shape": "ExternalReferenceTooLong"},
+        {"shape": "CancelRequestArrivedAfterTimeLimit"},
+        {"shape": "ProgramIdNotPresent"},
+        {"shape": "UnknownCustomer"},
+        {"shape": "InvalidAwsAccessKeyId"},
+        {"shape": "BlockedCustomer"},
+        {"shape": "InsufficientFunds"},
+        {"shape": "IssuanceCapExceeded"},
+        {"shape": "AccountHasProblems"},
+        {"shape": "OperationNotPermitted"},
+        {"shape": "BadInput"},
+        {"shape": "ActiveContractNotFound"},
+        {"shape": "CustomerAccountBlocked"},
+        {"shape": "InvalidProgramId"},
+        {"shape": "ProgramIsNotApproved"},
+        {"shape": "SystemTemporarilyUnavailable"},
+        {"shape": "GeneralError"},
+        {"shape": "ThrottlingException"}
+      ]
+    },
+    "GetAvailableFunds":{
+      "name":"GetAvailableFunds",
+      "http":{
+        "method":"POST",
+        "requestUri":"/GetAvailableFunds"
+      },
+      "input":{
+        "shape":"GetAvailableFundsRequest",
+        "locationName": "GetAvailableFundsRequest"
+      },
+      "output":{"shape":"GetAvailableFundsResponse"},
+      "errors":[
+        {"shape": "InvalidRequestInput"},
+        {"shape": "InvalidCardNumberInput"},
+        {"shape": "InvalidPartnerIdInput"},
+        {"shape": "InvalidAmountInput"},
+        {"shape": "InvalidAmountValue"},
+        {"shape": "InvalidCurrencyCodeInput"},
+        {"shape": "InvalidRequestIdInput"},
+        {"shape": "CardNotFound"},
+        {"shape": "RequestedDenominationMismatch"},
+        {"shape": "NegativeOrZeroAmount"},
+        {"shape": "MaxAmountExceeded"},
+        {"shape": "CurrencyCodeMismatch"},
+        {"shape": "FractionalAmountNotAllowed"},
+        {"shape": "GcNotReadyForRefund"},
+        {"shape": "RequestIdTooLong"},
+        {"shape": "RequestIdMustStartWithPartnerName"},
+        {"shape": "InvalidGCIdInput"},
+        {"shape": "InvalidCurrencyInMarketplace"},
+        {"shape": "AmountBelowMinThreshold"},
+        {"shape": "ExternalReferenceTooLong"},
+        {"shape": "CancelRequestArrivedAfterTimeLimit"},
+        {"shape": "ProgramIdNotPresent"},
+        {"shape": "UnknownCustomer"},
+        {"shape": "InvalidAwsAccessKeyId"},
+        {"shape": "BlockedCustomer"},
+        {"shape": "InsufficientFunds"},
+        {"shape": "IssuanceCapExceeded"},
+        {"shape": "AccountHasProblems"},
+        {"shape": "OperationNotPermitted"},
+        {"shape": "BadInput"},
+        {"shape": "ActiveContractNotFound"},
+        {"shape": "CustomerAccountBlocked"},
+        {"shape": "InvalidProgramId"},
+        {"shape": "ProgramIsNotApproved"},
+        {"shape": "SystemTemporarilyUnavailable"},
+        {"shape": "GeneralError"},
+        {"shape": "ThrottlingException"}
+      ]
+    }
+  },
+  "shapes": {
+    "CancelGiftCardRequest": {
+      "type": "structure",
+      "required": [
+        "creationRequestId",
+        "partnerId",
+        "gcId"
+      ],
+      "members": {
+        "creationRequestId": {
+          "shape": "CreationRequestId"
+        },
+        "partnerId": {
+          "shape": "PartnerId"
+        },
+        "gcId": {
+          "shape": "GcId"
+        }
+      }
+    },
+    "CancelGiftCardResponse": {
+      "type": "structure",
+      "required": [
+        "creationRequestId",
+        "status"
+      ],
+      "members": {
+        "creationRequestId": {
+          "shape": "CreationRequestId"
+        },
+        "status": {
+          "shape": "Status"
+        }
+      }
+    },
+    "CardInfo": {
+      "type": "structure",
+      "required": [
+        "value",
+        "cardStatus"
+      ],
+      "members": {
+        "value": {
+          "shape": "MoneyAmount"
+        },
+        "cardStatus": {
+          "shape": "CardStatus"
+        }
+      }
+    },
+    "CardStatus": {
+      "type": "string"
+    },
+    "CreateGiftCardRequest": {
+      "type": "structure",
+      "required": [
+        "creationRequestId",
+        "partnerId",
+        "value"
+      ],
+      "members": {
+        "creationRequestId": {
+          "shape": "CreationRequestId"
+        },
+        "partnerId": {
+          "shape": "PartnerId"
+        },
+        "value": {
+          "shape": "MoneyAmount"
+        },
+        "programId": {
+          "shape": "ProgramId"
+        },
+        "externalReference": {
+          "shape": "ExternalReference"
+        }
+      }
+    },
+    "CreateGiftCardResponse": {
+      "type": "structure",
+      "required": [
+        "creationRequestId",
+        "cardInfo",
+        "status"
+      ],
+      "members": {
+        "cardInfo": {
+          "shape": "CardInfo"
+        },
+        "creationRequestId": {
+          "shape": "CreationRequestId"
+        },
+        "status": {
+          "shape": "Status"
+        },
+        "gcClaimCode": {
+          "shape": "GcClaimCode"
+        },
+        "gcId": {
+          "shape": "GcId"
+        },
+        "gcExpirationDate": {
+          "shape": "Date"
+        }
+      }
+    },
+    "Date": {
+      "type": "timestamp"
+    },
+    "GcClaimCode": {
+      "type": "string"
+    },
+    "GcId": {
+      "type": "string"
+    },
+    "GetAvailableFundsRequest": {
+      "type": "structure",
+      "required": [
+        "partnerId"
+      ],
+      "members": {
+        "partnerId": {
+          "shape": "PartnerId"
+        }
+      }
+    },
+    "GetAvailableFundsResponse": {
+      "type": "structure",
+      "required": [
+        "availableFunds",
+        "status",
+        "timestamp"
+      ],
+      "members": {
+        "availableFunds": {
+          "shape": "MoneyAmount"
+        },
+        "status": {
+          "shape": "Status"
+        },
+        "timestamp": {
+          "shape": "Date"
+        }
+      }
+    },
+    "CreationRequestId": {
+      "type": "string",
+      "max": 40,
+      "min": 6
+    },
+    "PartnerId": {
+      "type": "string",
+      "max": 5,
+      "min": 5
+    },
+    "ProgramId": {
+      "type": "string"
+    },
+    "ExternalReference": {
+      "type": "string",
+      "max": 100
+    },
+    "MoneyAmount": {
+      "type": "structure",
+      "required": [
+        "amount",
+        "currencyCode"
+      ],
+      "members": {
+        "amount": {
+          "shape":  "Amount"
+        },
+        "currencyCode": {
+          "shape": "CurrencyCode"
+        }
+      }
+    },
+    "Amount": {
+      "type": "double",
+      "min": 0
+    },
+    "CurrencyCode": {
+      "type": "string",
+      "enum": [
+        "AUD",
+        "CAD",
+        "EUR",
+        "JPY",
+        "SAR",
+        "MXN",
+        "PLN",
+        "SGD",
+        "SEK",
+        "TRY",
+        "AED",
+        "GBP",
+        "USD"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "SUCCESS",
+        "RESEND",
+        "FAILURE"
+      ]
+    },
+    "InvalidRequestInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidCardNumberInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidPartnerIdInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidAmountInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidAmountValue": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidCurrencyCodeInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidRequestIdInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "CardNotFound": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "RequestedDenominationMismatch": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "NegativeOrZeroAmount": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "MaxAmountExceeded": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "CurrencyCodeMismatch": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "FractionalAmountNotAllowed": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "GcNotReadyForRefund": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "RequestIdTooLong": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "RequestIdMustStartWithPartnerName": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidGCIdInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidCurrencyInMarketplace": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "AmountBelowMinThreshold": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "ExternalReferenceTooLong": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "CancelRequestArrivedAfterTimeLimit": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "ProgramIdNotPresent": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "UnknownCustomer": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidAwsAccessKeyId": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "BlockedCustomer": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InsufficientFunds": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "IssuanceCapExceeded": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "AccountHasProblems": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "OperationNotPermitted": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "BadInput": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "ActiveContractNotFound": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "CustomerAccountBlocked": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "InvalidProgramId": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "ProgramIsNotApproved": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "SystemTemporarilyUnavailable": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    },
+    "GeneralError": {
+      "type": "structure",
+      "members": {},
+      "exception": true,
+      "fault": true
+    },
+    "ThrottlingException": {
+      "type": "structure",
+      "members": {},
+      "exception": true
+    }
+  }
+}

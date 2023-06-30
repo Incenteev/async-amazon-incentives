@@ -1,0 +1,57 @@
+{
+  "version": "2.0",
+  "operations": {
+    "CancelGiftCard": "<p>You can cancel a gift card, as long as the gift card is not claimed by an Amazon customer. The original <code>creationRequestId</code> used for creating the gift card will be necessary to cancel a gift card.</p>",
+    "CreateGiftCard": "<p>Creates a live gift card claim code and deducts the amount from the pre-payment account.</p>",
+    "GetAvailableFunds": "<p>Returns the amount of funds currently available in your Amazon Incentives account. </p>"
+  },
+  "shapes": {
+    "CancelGiftCardRequest": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "CancelGiftCardResponse": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "CreateGiftCardRequest": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "CreateGiftCardResponse": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "CreationRequestId": {
+      "base": null,
+      "refs": {
+        "CreateGiftCardRequest$creationRequestId": "<p>A unique identifier for every <code>CreateGiftCard</code> request. You must generate a new value for every Create request (except for retries).<p><p>the ID must start with your <code>PartnerId</code> and must be at most 40 alphanumeric characters.</p>"
+      }
+    },
+    "ExternalReference": {
+      "base": "<p>The externalReference field may be used to store a convenient mapping to assist you with tracking. For example, you might specify insurance claims, kiosks, customer cases, order Ids, reseller customer accounts, or store information within the externalReference field.</p>",
+      "refs": {
+      }
+    },
+    "GetAvailableFundsRequest": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "GetAvailableFundsResponse": {
+      "base": null,
+      "refs": {
+      }
+    },
+    "PartnerId": {
+      "base": null,
+      "refs": {
+        "CreateGiftCardRequest$partnerId": "<p>A unique identifier (CASE SENSITIVE, 1st letter is capitalized and the next four are lower case) provided by the Amazon team.</p>"
+      }
+    }
+  }
+}
