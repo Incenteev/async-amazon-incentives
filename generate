@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+use AsyncAws\CodeGenerator\File\Location\StandalonePackageResolver;
+use AsyncAws\CodeGenerator\Runner;
+
+if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
+    echo "Run `composer install` before you run the `generate` script.\n";
+    exit(1);
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+Runner::create(__DIR__ . '/manifest.json', new StandalonePackageResolver(__DIR__, 'Incenteev\AsyncAmazonIncentives'), __DIR__ . '/.cache/generate')->run();

@@ -1,0 +1,18 @@
+{
+    "endpoints": "manifest/endpoints.json",
+    "services": {
+        "AmazonIncentives": {
+            "source": "manifest/api-2.json",
+            "documentation": "manifest/docs-2.json",
+            "pagination": "manifest/paginators-1.json",
+            "api-reference": "https://developer.amazon.com/docs/incentives-api/incentives-api.html",
+            "namespace": "Incenteev\\AsyncAmazonIncentives",
+            "error-factory": "Incenteev\\AsyncAmazonIncentives\\AmazonIncentivesErrorFactory",
+            "methods": [
+                "CancelGiftCard",
+                "CreateGiftCard",
+                "GetAvailableFunds"
+            ]
+        }
+    }
+}

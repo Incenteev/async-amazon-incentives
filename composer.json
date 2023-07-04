@@ -2,11 +2,20 @@
     "name": "incenteev/async-amazon-incentives",
     "description": "SDK for the Amazon Incentives API based on the structure of the async-aws project",
     "license": "MIT",
-    "keywords": ["AmazonGiftCode", "Amazon", "GiftCard", "AGCOD", "Incentives API", "Amazon Incentives API"],
+    "keywords": [
+        "AmazonGiftCode",
+        "Amazon",
+        "GiftCard",
+        "AGCOD",
+        "Incentives API",
+        "Amazon Incentives API"
+    ],
     "require": {
         "php": "^8.1"
     },
     "require-dev": {
+        "async-aws/code-generator": "dev-master",
+        "friendsofphp/php-cs-fixer": "^3.18",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-deprecation-rules": "^1.1",
         "phpstan/phpstan-phpunit": "^1.3",

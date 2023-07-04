@@ -1,7 +1,11 @@
 /tests export-ignore
 /.github export-ignore
+/.cache export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
+/.php-cs-fixer.php export-ignore
 /phpstan.neon export-ignore
 /phpunit.xml.dist export-ignore
+/generate export-ignore
 /manifest export-ignore
+/manifest.json export-ignore
