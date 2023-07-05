@@ -10,6 +10,7 @@ use Incenteev\AsyncAmazonIncentives\Enum\Status;
 use Incenteev\AsyncAmazonIncentives\Input\CancelGiftCardRequest;
 use Incenteev\AsyncAmazonIncentives\Input\CreateGiftCardRequest;
 use Incenteev\AsyncAmazonIncentives\Input\GetAvailableFundsRequest;
+use Incenteev\AsyncAmazonIncentives\Region;
 use Incenteev\AsyncAmazonIncentives\ValueObject\MoneyAmount;
 
 class AmazonIncentivesClientTest extends TestCase
@@ -74,7 +75,7 @@ class AmazonIncentivesClientTest extends TestCase
 
         // @phpstan-ignore-next-line
         return new AmazonIncentivesClient([
-            'endpoint' => 'http://localhost',
+            'region' => Region::EUROPE_AND_ASIA_SANDBOX,
         ], new NullProvider());
     }
 }

@@ -9,6 +9,7 @@ use Incenteev\AsyncAmazonIncentives\Enum\CurrencyCode;
 use Incenteev\AsyncAmazonIncentives\Input\CancelGiftCardRequest;
 use Incenteev\AsyncAmazonIncentives\Input\CreateGiftCardRequest;
 use Incenteev\AsyncAmazonIncentives\Input\GetAvailableFundsRequest;
+use Incenteev\AsyncAmazonIncentives\Region;
 use Incenteev\AsyncAmazonIncentives\Result\CancelGiftCardResponse;
 use Incenteev\AsyncAmazonIncentives\Result\CreateGiftCardResponse;
 use Incenteev\AsyncAmazonIncentives\Result\GetAvailableFundsResponse;
@@ -19,7 +20,7 @@ class AmazonIncentivesClientTest extends TestCase
 {
     public function testCancelGiftCard(): void
     {
-        $client = new AmazonIncentivesClient(['region' => 'eu'], new NullProvider(), new MockHttpClient());
+        $client = new AmazonIncentivesClient(['region' => Region::EUROPE_AND_ASIA_SANDBOX], new NullProvider(), new MockHttpClient());
 
         $input = new CancelGiftCardRequest([
             'creationRequestId' => 'change me',
@@ -34,7 +35,7 @@ class AmazonIncentivesClientTest extends TestCase
 
     public function testCreateGiftCard(): void
     {
-        $client = new AmazonIncentivesClient(['region' => 'eu'], new NullProvider(), new MockHttpClient());
+        $client = new AmazonIncentivesClient(['region' => Region::EUROPE_AND_ASIA_SANDBOX], new NullProvider(), new MockHttpClient());
 
         $input = new CreateGiftCardRequest([
             'creationRequestId' => 'change me',
@@ -52,7 +53,7 @@ class AmazonIncentivesClientTest extends TestCase
 
     public function testGetAvailableFunds(): void
     {
-        $client = new AmazonIncentivesClient(['region' => 'eu'], new NullProvider(), new MockHttpClient());
+        $client = new AmazonIncentivesClient(['region' => Region::EUROPE_AND_ASIA_SANDBOX], new NullProvider(), new MockHttpClient());
 
         $input = new GetAvailableFundsRequest([
             'partnerId' => 'change me',
