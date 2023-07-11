@@ -25,8 +25,8 @@ final class MoneyAmount
      */
     public function __construct(array $input)
     {
-        $this->amount = isset($input['amount']) ? $input['amount'] : $this->throwException(new InvalidArgument('Missing required field "amount".'));
-        $this->currencyCode = isset($input['currencyCode']) ? $input['currencyCode'] : $this->throwException(new InvalidArgument('Missing required field "currencyCode".'));
+        $this->amount = $input['amount'] ?? $this->throwException(new InvalidArgument('Missing required field "amount".'));
+        $this->currencyCode = $input['currencyCode'] ?? $this->throwException(new InvalidArgument('Missing required field "currencyCode".'));
     }
 
     /**

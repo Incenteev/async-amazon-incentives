@@ -25,7 +25,7 @@ final class CardInfo
     public function __construct(array $input)
     {
         $this->value = isset($input['value']) ? MoneyAmount::create($input['value']) : $this->throwException(new InvalidArgument('Missing required field "value".'));
-        $this->cardStatus = isset($input['cardStatus']) ? $input['cardStatus'] : $this->throwException(new InvalidArgument('Missing required field "cardStatus".'));
+        $this->cardStatus = $input['cardStatus'] ?? $this->throwException(new InvalidArgument('Missing required field "cardStatus".'));
     }
 
     /**

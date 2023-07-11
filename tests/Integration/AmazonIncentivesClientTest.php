@@ -115,7 +115,7 @@ class AmazonIncentivesClientTest extends TestCase
 
     private function getClient(): AmazonIncentivesClient
     {
-        if (!isset($_SERVER['AMAZON_INCENTIVES_ACCESS_KEY'], $_SERVER['AMAZON_INCENTIVES_SECRET_KEY']) || $_SERVER['AMAZON_INCENTIVES_ACCESS_KEY'] === '' || $_SERVER['AMAZON_INCENTIVES_SECRET_KEY'] === '') {
+        if (!isset($_SERVER['AMAZON_INCENTIVES_ACCESS_KEY'], $_SERVER['AMAZON_INCENTIVES_SECRET_KEY']) || '' === $_SERVER['AMAZON_INCENTIVES_ACCESS_KEY'] || '' === $_SERVER['AMAZON_INCENTIVES_SECRET_KEY']) {
             self::markTestSkipped('Test credentials are not provided.');
         }
 
@@ -126,7 +126,7 @@ class AmazonIncentivesClientTest extends TestCase
 
     private function getPartnerId(): string
     {
-        if (!isset($_SERVER['AMAZON_INCENTIVES_PARTNER_ID']) || $_SERVER['AMAZON_INCENTIVES_PARTNER_ID'] === '') {
+        if (!isset($_SERVER['AMAZON_INCENTIVES_PARTNER_ID']) || '' === $_SERVER['AMAZON_INCENTIVES_PARTNER_ID']) {
             self::markTestSkipped('Test credentials are not provided.');
         }
 
