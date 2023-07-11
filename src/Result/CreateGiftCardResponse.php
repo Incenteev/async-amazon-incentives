@@ -26,12 +26,12 @@ class CreateGiftCardResponse extends Result
     private $status;
 
     /**
-     * @var string|null
+     * @var string
      */
     private $gcClaimCode;
 
     /**
-     * @var string|null
+     * @var string
      */
     private $gcId;
 
@@ -54,7 +54,7 @@ class CreateGiftCardResponse extends Result
         return $this->creationRequestId;
     }
 
-    public function getGcClaimCode(): ?string
+    public function getGcClaimCode(): string
     {
         $this->initialize();
 
@@ -68,7 +68,7 @@ class CreateGiftCardResponse extends Result
         return $this->gcExpirationDate;
     }
 
-    public function getGcId(): ?string
+    public function getGcId(): string
     {
         $this->initialize();
 
@@ -97,8 +97,8 @@ class CreateGiftCardResponse extends Result
         ]);
         $this->creationRequestId = (string) $data->creationRequestId;
         $this->status = (string) $data->status;
-        $this->gcClaimCode = ($v = $data->gcClaimCode) ? (string) $v : null;
-        $this->gcId = ($v = $data->gcId) ? (string) $v : null;
+        $this->gcClaimCode = (string) $data->gcClaimCode;
+        $this->gcId = (string) $data->gcId;
         $this->gcExpirationDate = ($v = $data->gcExpirationDate) ? new \DateTimeImmutable((string) $v) : null;
     }
 }
