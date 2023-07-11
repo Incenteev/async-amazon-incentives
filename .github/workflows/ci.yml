@@ -64,4 +64,25 @@ jobs:
                 run: composer update --ansi --no-progress --prefer-dist --no-interaction ${{ matrix.composer_flags }}
 
             -   name: Run tests
-                run: vendor/bin/phpunit --colors=always
+                run: vendor/bin/phpunit --colors=always --exclude-group=integration
+
+    integration_tests:
+        name: "Integration tests"
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v3
+            -   uses: shivammathur/setup-php@v2
+                with:
+                    coverage: "none"
+                    php-version: "8.2"
+
+            -   name: Install dependencies
+                run: composer update --ansi --no-progress --prefer-dist --no-interaction
+
+            -   name: Run tests
+                run: vendor/bin/phpunit --colors=always --group=integration --display-skipped
+                env:
+                    AMAZON_INCENTIVES_ACCESS_KEY: ${{ secrets.AMAZON_INCENTIVES_ACCESS_KEY }}
+                    AMAZON_INCENTIVES_PARTNER_ID: ${{ secrets.AMAZON_INCENTIVES_PARTNER_ID }}
+                    AMAZON_INCENTIVES_SECRET_KEY: ${{ secrets.AMAZON_INCENTIVES_SECRET_KEY }}
