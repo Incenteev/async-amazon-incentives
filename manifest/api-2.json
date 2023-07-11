@@ -247,7 +247,9 @@
       "required": [
         "creationRequestId",
         "cardInfo",
-        "status"
+        "status",
+        "gcClaimCode",
+        "gcId"
       ],
       "members": {
         "cardInfo": {
