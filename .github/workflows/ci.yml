@@ -29,6 +29,19 @@ jobs:
               run: composer update --ansi --no-progress --prefer-dist --no-interaction
             - run: vendor/bin/phpstan analyze
 
+    coding_standards:
+        name: Coding standards
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: shivammathur/setup-php@v2
+              with:
+                  coverage: none
+                  php-version: '8.1'
+            - name: Install dependencies
+              run: composer update --ansi --no-progress --prefer-dist --no-interaction
+            - run: vendor/bin/php-cs-fixer fix --dry-run --show-progress=dots --no-interaction
+
     tests:
         name: "Tests on PHP ${{ matrix.php }}${{ matrix.name_suffix }}"
         runs-on: ubuntu-latest
