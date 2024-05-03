@@ -13,7 +13,7 @@ jobs:
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
-                  php-version: '8.1'
+                  php-version: '8.3'
             - run: composer validate --strict --no-check-lock
 
     static_analysis:
@@ -24,7 +24,7 @@ jobs:
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
-                  php-version: '8.1'
+                  php-version: '8.3'
             - name: Install dependencies
               run: composer update --ansi --no-progress --prefer-dist --no-interaction
             - run: vendor/bin/phpstan analyze
@@ -37,7 +37,7 @@ jobs:
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
-                  php-version: '8.1'
+                  php-version: '8.3'
             - name: Install dependencies
               run: composer update --ansi --no-progress --prefer-dist --no-interaction
             - run: vendor/bin/php-cs-fixer fix --dry-run --show-progress=dots --no-interaction
@@ -49,12 +49,12 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                php: [ '8.1', '8.2' ]
+                php: [ '8.1', '8.2', '8.3' ]
                 min_stability: [ '' ]
                 name_suffix: [ '' ]
                 composer_flags: [ '' ]
                 include:
-                    - php: '8.2'
+                    - php: '8.3'
                       min_stability: 'dev'
                       name_suffix: ' (dev deps)'
                     - php: '8.1'
@@ -73,6 +73,9 @@ jobs:
                 if: "matrix.min_stability != ''"
                 run: composer config minimum-stability "${{ matrix.min_stability }}"
 
+            -   name: Remove async-aws/code-generator # The code generator requires PHP 8.2+
+                run: composer remove --no-interaction --dev --no-update async-aws/code-generator
+
             -   name: Install dependencies
                 run: composer update --ansi --no-progress --prefer-dist --no-interaction ${{ matrix.composer_flags }}
 
@@ -88,7 +91,7 @@ jobs:
             -   uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
-                    php-version: "8.2"
+                    php-version: "8.3"
 
             -   name: Install dependencies
                 run: composer update --ansi --no-progress --prefer-dist --no-interaction
