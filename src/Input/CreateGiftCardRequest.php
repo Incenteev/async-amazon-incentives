@@ -54,8 +54,8 @@ final class CreateGiftCardRequest extends Input
      *   creationRequestId?: string,
      *   partnerId?: string,
      *   value?: MoneyAmount|array,
-     *   programId?: string,
-     *   externalReference?: string,
+     *   programId?: null|string,
+     *   externalReference?: null|string,
      *   '@region'?: string|null,
      * } $input
      */
@@ -74,8 +74,8 @@ final class CreateGiftCardRequest extends Input
      *   creationRequestId?: string,
      *   partnerId?: string,
      *   value?: MoneyAmount|array,
-     *   programId?: string,
-     *   externalReference?: string,
+     *   programId?: null|string,
+     *   externalReference?: null|string,
      *   '@region'?: string|null,
      * }|CreateGiftCardRequest $input
      */
