@@ -375,14 +375,14 @@ class AmazonIncentivesClient extends AbstractApi
             case 'fe':
                 return [
                     'endpoint' => 'https://agcod-v2-fe.amazon.com',
-                    'signRegion' => 'eu-west-1',
+                    'signRegion' => 'us-west-2',
                     'signService' => 'AGCODService',
                     'signVersions' => ['v4'],
                 ];
             case 'fe-sandbox':
                 return [
                     'endpoint' => 'https://agcod-v2-fe-gamma.amazon.com',
-                    'signRegion' => 'eu-west-1',
+                    'signRegion' => 'us-west-2',
                     'signService' => 'AGCODService',
                     'signVersions' => ['v4'],
                 ];
@@ -402,6 +402,6 @@ class AmazonIncentivesClient extends AbstractApi
                 ];
         }
 
-        throw new UnsupportedRegion(sprintf('The region "%s" is not supported by "AmazonIncentives".', $region));
+        throw new UnsupportedRegion(\sprintf('The region "%s" is not supported by "AmazonIncentives".', $region));
     }
 }
