@@ -402,6 +402,6 @@ class AmazonIncentivesClient extends AbstractApi
                 ];
         }
 
-        throw new UnsupportedRegion(sprintf('The region "%s" is not supported by "AmazonIncentives".', $region));
+        throw new UnsupportedRegion(\sprintf('The region "%s" is not supported by "AmazonIncentives".', $region));
     }
 }

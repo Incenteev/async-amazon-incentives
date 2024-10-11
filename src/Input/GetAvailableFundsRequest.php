@@ -81,7 +81,7 @@ final class GetAvailableFundsRequest extends Input
     private function requestBody(\DOMNode $node, \DOMDocument $document): void
     {
         if (null === $v = $this->partnerId) {
-            throw new InvalidArgument(sprintf('Missing parameter "partnerId" for "%s". The value cannot be null.', __CLASS__));
+            throw new InvalidArgument(\sprintf('Missing parameter "partnerId" for "%s". The value cannot be null.', __CLASS__));
         }
         $node->appendChild($document->createElement('partnerId', $v));
     }

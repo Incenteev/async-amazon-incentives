@@ -125,15 +125,15 @@ final class CancelGiftCardRequest extends Input
     private function requestBody(\DOMNode $node, \DOMDocument $document): void
     {
         if (null === $v = $this->creationRequestId) {
-            throw new InvalidArgument(sprintf('Missing parameter "creationRequestId" for "%s". The value cannot be null.', __CLASS__));
+            throw new InvalidArgument(\sprintf('Missing parameter "creationRequestId" for "%s". The value cannot be null.', __CLASS__));
         }
         $node->appendChild($document->createElement('creationRequestId', $v));
         if (null === $v = $this->partnerId) {
-            throw new InvalidArgument(sprintf('Missing parameter "partnerId" for "%s". The value cannot be null.', __CLASS__));
+            throw new InvalidArgument(\sprintf('Missing parameter "partnerId" for "%s". The value cannot be null.', __CLASS__));
         }
         $node->appendChild($document->createElement('partnerId', $v));
         if (null === $v = $this->gcId) {
-            throw new InvalidArgument(sprintf('Missing parameter "gcId" for "%s". The value cannot be null.', __CLASS__));
+            throw new InvalidArgument(\sprintf('Missing parameter "gcId" for "%s". The value cannot be null.', __CLASS__));
         }
         $node->appendChild($document->createElement('gcId', $v));
     }
