@@ -9,7 +9,7 @@ jobs:
         name: Check composer.json
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
@@ -20,7 +20,7 @@ jobs:
         name: Static analysis
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
@@ -33,7 +33,7 @@ jobs:
         name: Coding standards
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             - uses: shivammathur/setup-php@v2
               with:
                   coverage: none
@@ -83,7 +83,7 @@ jobs:
                       composer_flags: '--prefer-lowest'
 
         steps:
-            -   uses: actions/checkout@v3
+            -   uses: actions/checkout@v4
             -   uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
@@ -107,7 +107,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            -   uses: actions/checkout@v3
+            -   uses: actions/checkout@v4
             -   uses: shivammathur/setup-php@v2
                 with:
                     coverage: "none"
