@@ -62,7 +62,7 @@ final class MoneyAmount
         $node->appendChild($document->createElement('amount', (string) $v));
         $v = $this->currencyCode;
         if (!CurrencyCode::exists($v)) {
-            throw new InvalidArgument(sprintf('Invalid parameter "currencyCode" for "%s". The value "%s" is not a valid "CurrencyCode".', __CLASS__, $v));
+            throw new InvalidArgument(\sprintf('Invalid parameter "currencyCode" for "%s". The value "%s" is not a valid "CurrencyCode".', __CLASS__, $v));
         }
         $node->appendChild($document->createElement('currencyCode', $v));
     }
