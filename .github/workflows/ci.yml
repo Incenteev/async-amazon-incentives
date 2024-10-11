@@ -42,6 +42,26 @@ jobs:
               run: composer update --ansi --no-progress --prefer-dist --no-interaction
             - run: vendor/bin/php-cs-fixer fix --dry-run --show-progress=dots --no-interaction
 
+    check_generated_output:
+        name: Generated output not changed
+        needs: [coding_standards]
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: shivammathur/setup-php@v2
+              with:
+                  coverage: none
+                  php-version: '8.3'
+            - name: Install dependencies
+              run: composer update --ansi --no-progress --prefer-dist --no-interaction
+            - name: Regenerate
+              run: ./generate --all
+            - name: Assert up-to-date
+              uses: tj-actions/verify-changed-files@v20
+              with:
+                  fail-if-changed: 'true'
+                  fail-message: "Generated files don't match the manifest files. Make sure to run `./generate --all` to regenerate the code from the manifest."
+
     tests:
         name: "Tests on PHP ${{ matrix.php }}${{ matrix.name_suffix }}"
         runs-on: ubuntu-latest
