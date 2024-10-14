@@ -56,13 +56,13 @@
           "fe": {
             "hostname": "agcod-v2-fe.amazon.com",
             "credentialScope": {
-              "region": "eu-west-1"
+              "region": "us-west-2"
             }
           },
           "fe-sandbox": {
             "hostname": "agcod-v2-fe-gamma.amazon.com",
             "credentialScope": {
-              "region": "eu-west-1"
+              "region": "us-west-2"
             }
           }
         }
